@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "FiraSans";
+  src: local("FiraSans"), url(./fonts/FiraSans-Regular.ttf) format("truetype");
+}
+
+@import "./styles/index.scss";
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body,
+#root {
+  font-family: FiraSans;
+  height: 100vh;
+  margin: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 5rem 1fr 5rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+body,
+select,
+textarea,
+input {
+  font-size: 1.6rem;
+}
+
+header {
+  grid-area: header;
+  background-color: $bulebackground;
+  color: $whiteText;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  a:hover {
+    color: $orange;
+  }
+  a {
+    color: $whiteText;
+    text-decoration: none;
+  }
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  background-color: $bulebackground;
+  color: $whiteText;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
